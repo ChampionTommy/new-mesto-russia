@@ -14,7 +14,6 @@
 - Сохранение jwt-token в localstorage и сохранение сессии
 - из database используется mongodb-server
 - вместо страниц используются компоненты
-- eslint + prettier (в eslint мало правил т.к добавил его в самый последний момент и не хотел видеть 100+ errors по синтаксису)))
 - вместо npm используется pnpm в угоду симлинкам
   
 Минусы:
@@ -22,6 +21,8 @@
 - BEM + SASS не был добавлен потому что хотелось попробовать tailwind и я думал что получится "каша", но и без того она появилась с добавлением tailwind.config
 - Резинка сайта по сути от flex\grid + семантика, никакой адаптивки там нет.
 
+Спорный момент:
+- eslint + prettier (в eslint мало правил т.к добавил его после завершения проекта и не хотел видеть 100+ errors по синтаксису))), но при этом используется tslint + sonarjs. Под все это дело имеется конфиг огромный с правилами. Все работает, но увы, фиксы от eslint не помогут, он фиксит только часть...
 
 ## Installation
 
@@ -34,6 +35,15 @@ backend & frontend ничем не отличается по установке,
 cd reactMesto
 pnpm install
 pnpm dev
+```
+Скрипты: 
+```sh
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write {,*/**/}*.{ts,tsx}",
+    "eslint": "eslint . --ext .ts,.tsx ./components",
+    "eslint:dump": "eslint --print-config ./.eslintrc.json"
 ```
 
 ## Url production environments...
