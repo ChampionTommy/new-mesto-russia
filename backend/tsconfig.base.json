@@ -1,0 +1,13 @@
+// tsconfig.base.json
+{
+  "compilerOptions": {
+    "module": "CommonJs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "allowImportingTsExtensions": true
+  },
+  "lib": ["es2015"]
+}
