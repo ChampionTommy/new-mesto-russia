@@ -29,7 +29,7 @@
  [Node.js](https://nodejs.org/) v20+ to run.
  [Next.js](https://nextjs.org/) v13 to run. folder app/*
 
-Install the dependencies and devDependencies and start the server.
+
 backend & frontend ничем не отличается по установке, поэтому: 
 ```sh
 cd reactMesto
